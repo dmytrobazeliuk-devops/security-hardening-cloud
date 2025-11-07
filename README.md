@@ -1,47 +1,46 @@
 # Security Hardening for Cloud Infrastructure
 
-Automated security audit and hardening measures for cloud infrastructure
+Automated security hardening scripts and Terraform modules implementing CIS benchmarks and security best practices for AWS, GCP, and Azure.
 
 ## Features
 
-- **Automated Infrastructure**: Automated provisioning and management
-- **Best Practices**: Follows industry best practices and standards
-- **Scalable**: Designed for scalability and high availability
-- **Documentation**: Comprehensive documentation and examples
+- **CloudTrail**: Comprehensive audit logging
+- **GuardDuty**: Threat detection
+- **Security Hub**: Centralized security findings
+- **AWS Config**: Configuration compliance monitoring
+- **IAM Hardening**: Password policies and access controls
 
-## Tech Stack
+## Tools
 
-Terraform, Ansible, AWS, Security
-
-## Installation
-
-### Prerequisites
-
-- See individual module documentation for specific requirements
-
-### Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/dmytrobazeliuk-devops//var/www/vhosts/devsecops.cv/projects_repos/security-hardening-cloud.git
-cd /var/www/vhosts/devsecops.cv/projects_repos/security-hardening-cloud
-```
-
-2. Follow the setup instructions in the documentation
+- **AWS**: CloudTrail, GuardDuty, Security Hub, Config
+- **GCP**: Cloud Asset Inventory, Security Command Center
+- **Azure**: Security Center, Azure Policy
 
 ## Usage
 
-See individual module documentation for usage examples.
+### AWS Hardening Script
 
-## Project Structure
+```bash
+chmod +x scripts/harden-aws.sh
+./scripts/harden-aws.sh
+```
 
+### Terraform
+
+```bash
+cd terraform
+terraform init
+terraform plan
+terraform apply
 ```
-/var/www/vhosts/devsecops.cv/projects_repos/security-hardening-cloud/
-├── README.md              # This file
-├── modules/               # Reusable modules
-├── examples/              # Usage examples
-└── docs/                  # Documentation
-```
+
+## Security Controls
+
+- Enable audit logging (CloudTrail)
+- Enable threat detection (GuardDuty)
+- Configure password policies
+- Enable security monitoring (Security Hub)
+- Enable configuration compliance (Config)
 
 ## Contributing
 
